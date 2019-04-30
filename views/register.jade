@@ -1,0 +1,22 @@
+extends layout
+
+block content
+		include header
+		section.container
+			div.item.ph12.md5.mauto
+				form.form(method="POST" action="/postSignup")
+					fieldset
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="nombre", placeholder="Nombre", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="email", placeholder="Correo Electrónico", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="password", name="password", placeholder="Contraseña", required)
+						div.item.center
+							select.i-b.v-top.ph8.center.p_5.br_7(name="sexo")
+								option(value="femenino") Femenino
+								option(value="masculino") Masculino
+						div.item.center
+							input.ph4.mauto.button.add.br_7(type="submit", value="Registrar")
+							input(type="hidden", name="_method", value="PUT")
+		include footer

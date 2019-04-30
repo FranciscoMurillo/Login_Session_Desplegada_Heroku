@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	include header
+	br
+	section
+		article.app
+			div.avatar
+				img(src=`./img/${img}`)
+				h3.tcw Hola, #{name} 
+			br
+			div.item
+				p.tcw.f1.
+					La información que ha registrado en nuestra base de datos es la siguiente:
+			div.item.line.p_75
+				p.tcw.f1.
+					Email es: #{email}
+			div.item.line.p_75
+				p.tcw.f1.
+					Sexo: #{sexo}
+			div.item
+				p.tcw.f1.
+					Esto es una App construida con Node.js / MVC / Passport / Express / MongoDB / Jade
+	include footer
+
+	

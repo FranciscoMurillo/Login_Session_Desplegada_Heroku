@@ -1,0 +1,29 @@
+header.container-fluid.f0.p_5
+	div.p_5.ph12.md9.i-b.left
+		ul
+			a.p1.v-middle(href="/perfil")
+				li.i-b.f1 Perfil
+			a.p1.v-middle(href="/contacto")
+				li.i-b.f1 Contacto
+				
+	div.p_5.ph12.md3.i-b.f1.right
+		-if(name != undefined)
+			a.p1.v-middle(href="/logout")
+				div.i-b.floatr
+					p salir 
+				div.i-b
+					img.ph1.p25(src="./img/out.svg")
+		-else
+			a.p1.v-middle(href=`${ruta}`)
+				div.i-b.floatr
+					p=btn
+				div.i-b
+					img.ph1.p25(src="./img/user.svg")
+				
+div.container-fluid.header
+	section.container
+		div.item.logo
+			img(src="./img/logo.svg")
+section.container
+	div.item
+		h1.center=title		

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+		include header
+		section.container
+			div.item.ph12.md5.mauto
+				form.form(method="POST" action="/enviar")
+					fieldset
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="name", placeholder="Nombre", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="email", placeholder="Correo Electrónico", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="phone", placeholder="Telefono", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7(type="text", name="company", placeholder="Empresa", required)
+						div.item.center
+							textarea.i-b.v-top.ph8.center.p_5.br_7(name="message", cols="30", rows="10",placeholder="Deja tu mensaje.." required)
+						div.item.center
+							input.ph4.mauto.button.add.br_7(type="submit", value="Enviar")
+							input(type="hidden", name="_method", value="PUT")
+		include footer

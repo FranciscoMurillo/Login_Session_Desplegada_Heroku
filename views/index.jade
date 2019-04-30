@@ -1,0 +1,16 @@
+extends layout
+
+block content
+		include header
+		section.container
+			div.item.ph12.md5.mauto
+				form.form(method="POST" action="/login")
+					fieldset
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7#id(type="text", name="email", placeholder="Correo", required)
+						div.item.center
+							input.i-b.v-top.ph8.center.p_5.br_7#title(type="password", name="password", placeholder="Contraseña", required)
+						div.item.center
+							input.ph4.mauto.button.add.br_7(type="submit", value="Ingresar")
+							input(type="hidden", name="_method", value="PUT")
+		include footer
